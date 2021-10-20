@@ -30,5 +30,18 @@ namespace GenericsIntro
             items[items.Length - 1] = item;
         }
 
+
+        //Aşağıya yazacaklarım Önümüzdeki haftanın konusu, sadece bunu test etmek için yapıyorum, siz yazmayın.
+        //Mia: Bu arada editörde Alt+yukarı/aşağı -> kod satırını kaydırıyor | ctrl+yukarı/aşağı -> sayfayı kaydırıyor.
+        public int Lenght
+        {
+            get { return items.Length; }
+        }
+
+        public T[] Items
+        {
+            get { return items; }
+        }
+
     }
 }
