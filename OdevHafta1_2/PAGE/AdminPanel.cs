@@ -32,17 +32,17 @@ namespace OdevHafta1_2.PAGE
                     {
                         access = true;
                     }
-                    else{ access = false; }
+                    
 
                     if (k.Contains("adminPanelEditPerm") && v.Equals(true))
                     {
                         edit = true;
                     }
-                    else { edit = false; }           
+                         
                 }
 
-                if (access) { PageContent(); }
-                if (edit) { EditPageContent(); }
+                if(this.access)PageContent();
+                if(this.edit)EditPageContent(); 
 
 
             }
@@ -50,22 +50,22 @@ namespace OdevHafta1_2.PAGE
 
         }
 
-        private void PageContent()
+        public void PageContent()
         {
             //içerik aşağıdaki gibi olsun.
             Console.WriteLine("Admin panel içerik");
-            Dictionary<string, bool> listOfPerm = userService.PostAuthority();
+            //Dictionary<string, bool> listOfPerm = userService.PostAuthority();
             
-            foreach (var i in listOfPerm) { Console.WriteLine(i); }
+            //foreach (var i in listOfPerm) { Console.WriteLine(i); }
         }
 
         private void EditPageContent()
         {
             //içerik aşağıdaki gibi olsun.
             Console.WriteLine("Admin panel edit içerik");
-            Dictionary<string, bool> listOfPerm = userService.PostAuthority();
+            //Dictionary<string, bool> listOfPerm = userService.PostAuthority();
 
-            foreach (var i in listOfPerm) { Console.WriteLine(i); }
+            //foreach (var i in listOfPerm) { Console.WriteLine(i); }
         }
 
     }

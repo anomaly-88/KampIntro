@@ -62,7 +62,7 @@ namespace OdevHafta1_2
 
 
             IUserService userService = new UserServiceManager();
-            IMonitorService monitor = new MonitorManager(user2, new MailServiceManager());
+            IMonitorService monitor = new MonitorManager(user1, new MailServiceManager());
             CommentManager newComment1 = new CommentManager(monitor); 
 
             Console.WriteLine("");
@@ -92,6 +92,7 @@ namespace OdevHafta1_2
 
             //Page
             AdminPanel adminPanel = new AdminPanel(userService);
+            
             
             
         }
